@@ -16,6 +16,16 @@ class Tree(Entity):
             rotation = rotation
         )
 
+class House(Entity):
+    def __init__(self, position, scale, rotation):
+        super().__init__(
+            model = 'asset/house',
+            position = position,
+            scale = scale,
+            origin = 0,
+            rotation = rotation
+        )
+
 
 game_text = Text(text='', scale=3, position=(-0.4, 0.4, 0), origin=0, color=color.red)
 
@@ -71,6 +81,13 @@ line = Entity(model='cube', position=(0, 0.1, END_LINE), scale=(100, 1, 1), colo
 
 for _ in range(20):
     tree = Tree(
+        position=(randint(-50, 50), 0.3, randint(-50,50)),
+        scale = randint(20,40) / 100,
+        rotation=(randint(-5, 5), randint(0, 360), randint(-5,5))
+    )
+
+for _ in range(10):
+    house = House(
         position=(randint(-50, 50), 0.3, randint(-50,50)),
         scale = randint(20,40) / 100,
         rotation=(randint(-5, 5), randint(0, 360), randint(-5,5))
