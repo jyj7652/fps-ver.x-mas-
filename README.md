@@ -6,6 +6,4 @@ I edited a game using Python and Ursina game engine in in the (https://github.co
 
 - Python 3
 - [Ursina](https://www.ursinaengine.org/)
-- DynamiKontrol https://dk.m47rix.com
-- OpenCV
 - playsound
