@@ -26,6 +26,16 @@ class House(Entity):
             rotation = rotation
         )
 
+class Gift(Entity):
+    def __init__(self, position, scale, rotation):
+        super().__init__(
+            model = 'asset/gift',
+            position = position,
+            scale = scale,
+            origin = 0,
+            rotation = rotation
+        )
+
 
 game_text = Text(text='', scale=3, position=(-0.4, 0.4, 0), origin=0, color=color.red)
 
@@ -90,6 +100,13 @@ for _ in range(10):
     house = House(
         position=(randint(-50, 50), 0.3, randint(-50,50)),
         scale = randint(20,40) / 100,
+        rotation=(randint(-5, 5), randint(0, 360), randint(-5,5))
+    )
+
+for _ in range(10):
+    gift = Gift(
+        position=(randint(-50, 50), 0.3, randint(-50,50)),
+        scale = randint(40,60) / 100,
         rotation=(randint(-5, 5), randint(0, 360), randint(-5,5))
     )
 
